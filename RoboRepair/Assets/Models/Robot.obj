@@ -1,5 +1,5 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 01.02.2020 11:05:39
+# File Created: 01.02.2020 13:02:31
 
 mtllib Robot.mtl
 
@@ -1477,7 +1477,7 @@ vt 0.6229 0.1583 0.0000
 
 o Robot
 g Robot
-usemtl 01___Default
+usemtl RobotTexture
 s 8
 f 1/1/1 2/2/2 3/3/3 4/4/4 
 s 32
