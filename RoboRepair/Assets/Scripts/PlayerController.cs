@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public GameObject repairShot;
     public GameObject bulletSpawn;
+    public GameObject[] enemies = new GameObject[5];
 
     [SerializeField]
     double timePassed;
@@ -44,6 +45,11 @@ public class PlayerController : MonoBehaviour
         commandValues = values;
 
         StartCoroutine(ExecuteCodeBlocks());
+
+        foreach(GameObject g in enemies)
+        {
+            g.GetComponent<EnemyController>().BeginPathing();
+        }
     }
 
     IEnumerator ExecuteCodeBlocks()
