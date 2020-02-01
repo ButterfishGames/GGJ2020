@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 4e965c630e95c5643b2f93015a7a5a02
+guid: 2622505af90980a449a9cd5dd100168a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -446886974601653676
-    second: RepairBlock_0
+      213: -9039032713509276954
+    second: BrokenBlock_0
   - first:
-      213: -5389987218305861665
-    second: RepairBlock_1
+      213: 3836058302133603257
+    second: BrokenBlock_1
+  - first:
+      213: -1271208668465966643
+    second: BrokenBlock_2
+  - first:
+      213: 3633613910827037109
+    second: BrokenBlock_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -128,7 +134,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RepairBlock_0
+      name: BrokenBlock_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fefc11755c40dd4a876c82b4d89cc35
+      internalID: -9039032713509276954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenBlock_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 160
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288b89984e2485a4c9b8dc4e39d981c0
+      internalID: 3836058302133603257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenBlock_2
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e10367b01567dd409699d123c951d17
-      internalID: -446886974601653676
+      spriteID: 77daf904c67ac0b49941f9dcd7ce91d6
+      internalID: -1271208668465966643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RepairBlock_1
+      name: BrokenBlock_3
       rect:
         serializedVersion: 2
         x: 0
@@ -163,8 +211,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0efbfe08f7ba1b2418d09fb816575a3b
-      internalID: -5389987218305861665
+      spriteID: cf5e51cf2ec630b43b47a5bc501c3705
+      internalID: 3633613910827037109
       vertices: []
       indices: 
       edges: []
@@ -172,7 +220,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b687c518328b27d4d8cbfca8091c7279
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

@@ -24,11 +24,18 @@ public class SlotController : MonoBehaviour, IDropHandler
         {
             BlockController dragBlockController = BlockController.blockBeingDragged.GetComponent<BlockController>();
             BlockController.blockBeingDragged.transform.SetParent(transform);
+            BlockController.blockBeingDragged.transform.localScale = Vector3.one;
             if (BlockController.blockBeingDragged.GetComponent<Button>() == null)
             {
                 Button remove = BlockController.blockBeingDragged.AddComponent<Button>();
                 remove.onClick.AddListener(() => dragBlockController.RemoveBlock());
             }
+
+            if (dragBlockController.currSprite % 2 == 0)
+            {
+                dragBlockController.currSprite++;
+            }
+            BlockController.blockBeingDragged.GetComponent<Image>().sprite = dragBlockController.sprites[dragBlockController.currSprite];
         }
     }
 }

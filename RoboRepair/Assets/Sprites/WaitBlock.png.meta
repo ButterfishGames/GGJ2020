@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 4e965c630e95c5643b2f93015a7a5a02
+guid: 3f37aeaf7c866bb4992925db193e1139
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -446886974601653676
-    second: RepairBlock_0
+      213: 52738734832823278
+    second: WaitBlock_0
   - first:
-      213: -5389987218305861665
-    second: RepairBlock_1
+      213: 1917580319346092051
+    second: WaitBlock_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RepairBlock_0
+      name: WaitBlock_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e10367b01567dd409699d123c951d17
-      internalID: -446886974601653676
+      spriteID: 2139c27e09080f94eba708f3f3f9a9f2
+      internalID: 52738734832823278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RepairBlock_1
+      name: WaitBlock_1
       rect:
         serializedVersion: 2
         x: 0
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0efbfe08f7ba1b2418d09fb816575a3b
-      internalID: -5389987218305861665
+      spriteID: 811b9d5c853a6864594038bdc6e7478f
+      internalID: 1917580319346092051
       vertices: []
       indices: 
       edges: []
@@ -172,7 +172,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b687c518328b27d4d8cbfca8091c7279
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

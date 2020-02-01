@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 4e965c630e95c5643b2f93015a7a5a02
+guid: 4e441071e40a7c74e9776253c6f889f5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -446886974601653676
-    second: RepairBlock_0
+      213: 6038916055364232840
+    second: MoveBlock_0
   - first:
-      213: -5389987218305861665
-    second: RepairBlock_1
+      213: 7147854305872005666
+    second: MoveBlock_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RepairBlock_0
+      name: MoveBlock_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e10367b01567dd409699d123c951d17
-      internalID: -446886974601653676
+      spriteID: 4f0425e1b515fe54dbe0008afc892016
+      internalID: 6038916055364232840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RepairBlock_1
+      name: MoveBlock_1
       rect:
         serializedVersion: 2
         x: 0
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0efbfe08f7ba1b2418d09fb816575a3b
-      internalID: -5389987218305861665
+      spriteID: d2b6e154635d50a41b4a16a44a8030ba
+      internalID: 7147854305872005666
       vertices: []
       indices: 
       edges: []
@@ -172,7 +172,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b687c518328b27d4d8cbfca8091c7279
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
