@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public GameObject repairShot;
     public GameObject bulletSpawn;
+    public GameObject[] enemies;
 
     [SerializeField]
     double timePassed;
@@ -14,18 +15,17 @@ public class PlayerController : MonoBehaviour
     int[] commandActions;
     int[] commandValues;
 
-    bool executing = false;
+    public bool executing = false;
 
-    int speed = 0;
     Vector3 rotation = Vector3.zero;
 
     //Just for tweaking and iterating, should not be modifiable by player
     int _moveSpeed = 5;
-    int _turnSpeed = 45;
+    int _turnSpeed = 90;
 
     void Start()
     {
-        
+        //SetCommands();
     }
 
     void Update()
@@ -35,8 +35,15 @@ public class PlayerController : MonoBehaviour
             timePassed = Time.time;
         }
 
-        gameObject.transform.Translate(speed * Vector3.forward * Time.deltaTime);
         gameObject.transform.Rotate(rotation * Time.deltaTime);
+    }
+
+    public void SetCommands()
+    {
+        foreach (GameObject g in enemies)
+        {
+            g.GetComponent<EnemyController>().BeginPathing();
+        }
     }
 
     public void SetCommands(int[] actions, int[] values)
@@ -45,6 +52,11 @@ public class PlayerController : MonoBehaviour
         commandValues = values;
 
         StartCoroutine(ExecuteCodeBlocks());
+
+        foreach(GameObject g in enemies)
+        {
+            g.GetComponent<EnemyController>().BeginPathing();
+        }
     }
 
     IEnumerator ExecuteCodeBlocks()
@@ -87,11 +99,11 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Move(int distance)
     {
-        speed = _moveSpeed;
+        gameObject.GetComponent<Rigidbody>().velocity = transform.forward * _moveSpeed;
 
         yield return new WaitForSeconds(distance/_moveSpeed);
 
-        speed = 0;
+        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         executing = false;
     }
 

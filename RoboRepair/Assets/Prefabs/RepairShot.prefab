@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7725743359070046424}
   m_Layer: 0
   m_Name: RepairShot
-  m_TagString: Untagged
+  m_TagString: Repair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
