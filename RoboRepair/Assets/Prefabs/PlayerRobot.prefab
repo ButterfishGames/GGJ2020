@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6501339041120877123}
   - component: {fileID: 6501339041120877122}
   - component: {fileID: 6501339041120877125}
+  - component: {fileID: 1820006188}
   m_Layer: 0
   m_Name: PlayerRobot
   m_TagString: Untagged
@@ -108,9 +109,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec91d3600c78a84d9acf79d78d3cce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  repairShot: {fileID: 0}
+  bullet: {fileID: 7345423813220810775, guid: 38db359b759a06549b59d016cd277784, type: 3}
+  repairShot: {fileID: 7366031489793799729, guid: 91165fd081ea213498e5566a88f112f1,
+    type: 3}
+  bulletSpawn: {fileID: 8168239818870089629}
+  enemies:
+  - {fileID: 0}
   timePassed: 0
+  executing: 0
+--- !u!54 &1820006188
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501339041120877124}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6501339042742334969
 GameObject:
   m_ObjectHideFlags: 0
