@@ -45,11 +45,29 @@ public class MenuController : MonoBehaviour
         }
         slots = slotList.ToArray();
 
+        for(int i = 0; i < LevelController.singleton.brokenBlocks.Length; i++)
+        {
+            SlotController slot = slots[LevelController.singleton.brokenBlocks[i].slot];
+            if (slot.block == null)
+            {
+                GameObject codeBlock = Instantiate(blockPrefab, slot.transform);
+                BlockController blockController = codeBlock.GetComponent<BlockController>();
+                blockController.block = LevelController.singleton.brokenBlocks[i].block;
+                blockController.broken = true;
+                blockController.InitUI();
+            }
+            else
+            {
+                Debug.Log("ERROR: Repeated slot for broken blocks");
+            }
+        }
+
         foreach (Block block in LevelController.singleton.inventory)
         {
             GameObject codeBlock = Instantiate(blockPrefab, inventoryContent);
-            codeBlock.GetComponent<BlockController>().block = block;
-            codeBlock.GetComponent<BlockController>().InitUI();
+            BlockController blockController = codeBlock.GetComponent<BlockController>();
+            blockController.block = block;
+            blockController.InitUI();
         }
     }
 
@@ -71,7 +89,7 @@ public class MenuController : MonoBehaviour
 
     public void RunScript()
     {
-        List<int> commands = new List<int>();
+        List<int> actions = new List<int>();
         List<int> values = new List<int>();
 
         foreach (SlotController slot in slots)
@@ -79,17 +97,11 @@ public class MenuController : MonoBehaviour
             if (slot.block != null)
             {
                 Block block = slot.block.GetComponent<BlockController>().block;
-                commands.Add((int)block.blockType);
+                actions.Add((int)block.blockType);
                 values.Add(block.val);
             }
         }
 
-        // Method call on PlayerController passing commands.ToArray() and values.ToArray() as args
-
-        // DELETE AFTER TESTING
-        for (int i = 0; i < commands.ToArray().Length; i++)
-        {
-            Debug.Log(commands[i] + " " + values[i]);
-        }
+        FindObjectOfType<PlayerController>().SetCommands(actions.ToArray(), values.ToArray());
     }
 }
