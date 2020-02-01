@@ -71,7 +71,7 @@ public class MenuController : MonoBehaviour
 
     public void RunScript()
     {
-        List<int> commands = new List<int>();
+        List<int> actions = new List<int>();
         List<int> values = new List<int>();
 
         foreach (SlotController slot in slots)
@@ -79,17 +79,11 @@ public class MenuController : MonoBehaviour
             if (slot.block != null)
             {
                 Block block = slot.block.GetComponent<BlockController>().block;
-                commands.Add((int)block.blockType);
+                actions.Add((int)block.blockType);
                 values.Add(block.val);
             }
         }
 
-        // Method call on PlayerController passing commands.ToArray() and values.ToArray() as args
-
-        // DELETE AFTER TESTING
-        for (int i = 0; i < commands.ToArray().Length; i++)
-        {
-            Debug.Log(commands[i] + " " + values[i]);
-        }
+        FindObjectOfType<PlayerController>().SetCommands(actions.ToArray(), values.ToArray());
     }
 }
