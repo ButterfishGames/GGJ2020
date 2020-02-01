@@ -16,6 +16,8 @@ public class EnemyController : MonoBehaviour
     public GameObject bullet;
     public GameObject bulletSpawn;
 
+    public ParticleSystem explosion;
+
     List<Transform> Waypoints;
 
     NavMeshAgent agent;
@@ -118,5 +120,15 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         agent.destination = Waypoints[currentWP].position;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Bullet"))
+        {
+            ParticleSystem boom = Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 }
