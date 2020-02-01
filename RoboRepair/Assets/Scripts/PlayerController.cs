@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
 
     public bool executing = false;
 
-    int speed = 0;
     Vector3 rotation = Vector3.zero;
 
     //Just for tweaking and iterating, should not be modifiable by player
