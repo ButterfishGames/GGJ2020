@@ -61,12 +61,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.3160377, b: 0.3160377, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7147854305872005666, guid: 4e441071e40a7c74e9776253c6f889f5,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -100,9 +101,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775df669662107445ae3897bf47e3e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  broken: 0
   block:
     blockType: 0
     val: 0
+  sprites:
+  - {fileID: 7147854305872005666, guid: 4e441071e40a7c74e9776253c6f889f5, type: 3}
+  - {fileID: 6038916055364232840, guid: 4e441071e40a7c74e9776253c6f889f5, type: 3}
+  - {fileID: -8202369147393433819, guid: ef2e195eb14c9d84aa965d08727b0e68, type: 3}
+  - {fileID: 4532152227254593042, guid: ef2e195eb14c9d84aa965d08727b0e68, type: 3}
+  - {fileID: -8376669279639663871, guid: 929bc6ed6d81365489536e08301c7dab, type: 3}
+  - {fileID: -507317166389273889, guid: 929bc6ed6d81365489536e08301c7dab, type: 3}
+  - {fileID: -5389987218305861665, guid: 4e965c630e95c5643b2f93015a7a5a02, type: 3}
+  - {fileID: -446886974601653676, guid: 4e965c630e95c5643b2f93015a7a5a02, type: 3}
+  - {fileID: 1917580319346092051, guid: 3f37aeaf7c866bb4992925db193e1139, type: 3}
+  - {fileID: 52738734832823278, guid: 3f37aeaf7c866bb4992925db193e1139, type: 3}
+  - {fileID: -9039032713509276954, guid: 2622505af90980a449a9cd5dd100168a, type: 3}
+  currSprite: 0
+  brokenController: {fileID: 9100000, guid: b72336a7b1b2f974e8c88b373ce4d528, type: 2}
 --- !u!1 &5966045970605471611
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,8 +151,8 @@ RectTransform:
   m_Father: {fileID: 2483452281650380902}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.075, y: 0.112500004}
+  m_AnchorMax: {x: 0.91875005, y: 0.85}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -240,7 +256,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 10
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
