@@ -5,6 +5,12 @@ using TMPro;
 
 public class MenuController : MonoBehaviour
 {
+    public static MenuController singleton;
+
+    public GameObject blockPrefab;
+
+    public GameObject slotPrefab;
+
     public RectTransform codingPanel;
 
     public RectTransform inventoryContent;
@@ -15,18 +21,27 @@ public class MenuController : MonoBehaviour
 
     private bool showing;
 
+    private SlotController[] slots;
+
     // Start is called before the first frame update
     void Start()
     {
-        showing = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
+        if (singleton == null)
         {
+            singleton = this;
+        }
+        else if (singleton != this)
+        {
+            Destroy(gameObject);
+        }
 
+        showing = false;
+
+        List<SlotController> slotList = new List<SlotController>();
+        for (int i = 0; i < LevelController.singleton.numSlots; i++)
+        {
+            GameObject slot = Instantiate(slotPrefab, instructionContent);
+            slot
         }
     }
 

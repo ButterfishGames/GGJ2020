@@ -1,0 +1,31 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class SlotController : MonoBehaviour, IDropHandler
+{
+    public GameObject block
+    {
+        get
+        {
+            if (transform.childCount > 0)
+            {
+                return transform.GetChild(0).gameObject;
+            }
+            return null;
+        }
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        if (!block)
+        {
+            BlockController dragBlockController = BlockController.blockBeingDragged.GetComponent<BlockController>();
+            BlockController.blockBeingDragged.transform.SetParent(transform);
+            Button remove = BlockController.blockBeingDragged.AddComponent<Button>();
+            remove.onClick.AddListener(() => dragBlockController.RemoveBlock());
+        }
+    }
+}
