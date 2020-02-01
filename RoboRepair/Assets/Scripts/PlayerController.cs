@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public GameObject repairShot;
     public GameObject bulletSpawn;
     public GameObject[] enemies;
+    public GameObject[] workers;
 
     [SerializeField]
     double timePassed;
@@ -44,6 +45,11 @@ public class PlayerController : MonoBehaviour
         {
             g.GetComponent<EnemyController>().BeginPathing();
         }
+
+        foreach (GameObject g in workers)
+        {
+            g.GetComponent<WorkerController>().BeginBeingBroken();
+        }
     }
 
     public void SetCommands(int[] actions, int[] values)
@@ -56,6 +62,10 @@ public class PlayerController : MonoBehaviour
         foreach(GameObject g in enemies)
         {
             g.GetComponent<EnemyController>().BeginPathing();
+        }
+        foreach (GameObject g in workers)
+        {
+            g.GetComponent<WorkerController>().BeginBeingBroken();
         }
     }
 
