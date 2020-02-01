@@ -1084,25 +1084,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory:
   - blockType: 0
-    val: 3
+    val: 5
   - blockType: 0
-    val: 3
+    val: 5
+  - blockType: 0
+    val: 5
+  - blockType: 0
+    val: 5
   - blockType: 0
     val: 5
   - blockType: 1
-    val: 45
+    val: 90
+  - blockType: 1
+    val: -90
+  - blockType: 1
+    val: 90
+  - blockType: 1
+    val: -90
+  - blockType: 1
+    val: 180
+  - blockType: 4
+    val: 2
+  - blockType: 1
+    val: -180
+  - blockType: 4
+    val: 3
   - blockType: 1
     val: -45
   - blockType: 2
     val: 0
-  - blockType: 2
-    val: 0
+  - blockType: 1
+    val: 45
+  - blockType: 0
+    val: 8
   - blockType: 3
     val: 0
-  - blockType: 3
-    val: 0
-  - blockType: 4
-    val: 1
+  - blockType: 1
+    val: 45
+  - blockType: 1
+    val: -45
   brokenBlocks:
   - block:
       blockType: 1
@@ -3729,7 +3749,7 @@ PrefabInstance:
     - target: {fileID: 6501339041120877121, guid: 4615d4f8af7282c4db08071c756d0f1c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.5
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6501339041120877121, guid: 4615d4f8af7282c4db08071c756d0f1c,
         type: 3}
@@ -3739,7 +3759,7 @@ PrefabInstance:
     - target: {fileID: 6501339041120877121, guid: 4615d4f8af7282c4db08071c756d0f1c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6501339041120877121, guid: 4615d4f8af7282c4db08071c756d0f1c,
         type: 3}

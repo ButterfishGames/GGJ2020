@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -78,6 +79,9 @@ public class PlayerController : MonoBehaviour
 
             yield return new WaitUntil(() => executing == false);
         }
+
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void CheckNumber(int action, int value)

@@ -8,8 +8,8 @@ public class WorkerController : MonoBehaviour
     public Material repaired;
     double speed;
     double reverseTimer = -1;
-    [Range(1, 3)]
-    public int behaviour = 2;
+    //[Range(1, 3)]
+    int behaviour = 0;
     public Transform ButtonObjective;
 
     NavMeshAgent agent;
@@ -26,6 +26,7 @@ public class WorkerController : MonoBehaviour
     public void BeginBeingBroken()
     {
         speed = 2;
+        behaviour = 1;
     }
 
     void Update()
