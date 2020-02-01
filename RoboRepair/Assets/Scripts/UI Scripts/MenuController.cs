@@ -48,6 +48,8 @@ public class MenuController : MonoBehaviour
         foreach (Block block in LevelController.singleton.inventory)
         {
             GameObject codeBlock = Instantiate(blockPrefab, inventoryContent);
+            codeBlock.GetComponent<BlockController>().block = block;
+            codeBlock.GetComponent<BlockController>().InitUI();
         }
     }
 
@@ -64,6 +66,30 @@ public class MenuController : MonoBehaviour
             codingPanel.anchoredPosition = new Vector2(-384, 0);
             toggleText.text = ">"; // Delete when sprites for toggle are created
             showing = true;
+        }
+    }
+
+    public void RunScript()
+    {
+        List<int> commands = new List<int>();
+        List<int> values = new List<int>();
+
+        foreach (SlotController slot in slots)
+        {
+            if (slot.block != null)
+            {
+                Block block = slot.block.GetComponent<BlockController>().block;
+                commands.Add((int)block.blockType);
+                values.Add(block.val);
+            }
+        }
+
+        // Method call on PlayerController passing commands.ToArray() and values.ToArray() as args
+
+        // DELETE AFTER TESTING
+        for (int i = 0; i < commands.ToArray().Length; i++)
+        {
+            Debug.Log(commands[i] + " " + values[i]);
         }
     }
 }

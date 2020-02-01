@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class BlockController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -35,6 +36,44 @@ public class BlockController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         transform.SetParent(MenuController.singleton.inventoryContent);
         Destroy(GetComponent<Button>());
+    }
+
+    public void InitUI()
+    {
+        string text = "";
+        switch (block.blockType)
+        {
+            case Block.BlockType.move:
+                text = "Move " + block.val;
+                break;
+
+            case Block.BlockType.turn:
+                text = "Turn ";
+                if (block.val > 0)
+                {
+                    text += "R ";
+                }
+                else
+                {
+                    text += "L ";
+                }
+                text += Mathf.Abs(block.val) + "°";
+                break;
+
+            case Block.BlockType.shoot:
+                text = "Shoot";
+                break;
+
+            case Block.BlockType.repair:
+                text = "Repair";
+                break;
+
+            case Block.BlockType.wait:
+                text = "Wait " + block.val + "s";
+                break;
+        }
+
+        GetComponentInChildren<TextMeshProUGUI>().text = text;
     }
 }
 

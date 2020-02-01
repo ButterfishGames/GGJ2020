@@ -24,8 +24,11 @@ public class SlotController : MonoBehaviour, IDropHandler
         {
             BlockController dragBlockController = BlockController.blockBeingDragged.GetComponent<BlockController>();
             BlockController.blockBeingDragged.transform.SetParent(transform);
-            Button remove = BlockController.blockBeingDragged.AddComponent<Button>();
-            remove.onClick.AddListener(() => dragBlockController.RemoveBlock());
+            if (BlockController.blockBeingDragged.GetComponent<Button>() == null)
+            {
+                Button remove = BlockController.blockBeingDragged.AddComponent<Button>();
+                remove.onClick.AddListener(() => dragBlockController.RemoveBlock());
+            }
         }
     }
 }
