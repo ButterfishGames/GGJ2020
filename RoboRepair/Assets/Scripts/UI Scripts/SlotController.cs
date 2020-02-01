@@ -29,6 +29,11 @@ public class SlotController : MonoBehaviour, IDropHandler
 
         if (block != null)
         {
+            if (block.GetComponent<BlockController>().broken)
+            {
+                return;
+            }
+
             GameObject exBlock = block;
             exBlock.transform.SetParent(dragBlockController.previousParent);
             exBlock.transform.localScale = Vector3.one;
