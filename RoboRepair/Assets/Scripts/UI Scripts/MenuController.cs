@@ -89,6 +89,13 @@ public class MenuController : MonoBehaviour
 
     public void RunScript()
     {
+        PlayerController player = FindObjectOfType<PlayerController>();
+
+        if (player.executing)
+        {
+            return;
+        }
+
         List<int> actions = new List<int>();
         List<int> values = new List<int>();
 
@@ -102,6 +109,8 @@ public class MenuController : MonoBehaviour
             }
         }
 
-        FindObjectOfType<PlayerController>().SetCommands(actions.ToArray(), values.ToArray());
+        player.SetCommands(actions.ToArray(), values.ToArray());
+
+        ToggleMenu();
     }
 }
