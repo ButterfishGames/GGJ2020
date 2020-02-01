@@ -50,7 +50,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        bool coneIntersected = Physics.BoxCast(visionCollider.bounds.center, visionCollider.bounds.size / 2, visionCollider.gameObject.transform.forward, out hit, visionCollider.gameObject.transform.rotation, .01f);
+        bool coneIntersected = Physics.BoxCast(visionCollider.bounds.center, visionCollider.bounds.size / 2, visionCollider.gameObject.transform.forward, out hit, visionCollider.gameObject.transform.rotation, 1);
 
         if(coneIntersected)
         {

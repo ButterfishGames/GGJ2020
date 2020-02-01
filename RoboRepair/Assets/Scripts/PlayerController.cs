@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public GameObject repairShot;
     public GameObject bulletSpawn;
-    public GameObject[] enemies = new GameObject[5];
+    public GameObject[] enemies;
 
     [SerializeField]
     double timePassed;
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+        //SetCommands();
     }
 
     void Update()
@@ -37,6 +37,14 @@ public class PlayerController : MonoBehaviour
         }
 
         gameObject.transform.Rotate(rotation * Time.deltaTime);
+    }
+
+    public void SetCommands()
+    {
+        foreach (GameObject g in enemies)
+        {
+            g.GetComponent<EnemyController>().BeginPathing();
+        }
     }
 
     public void SetCommands(int[] actions, int[] values)
