@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
             timePassed = Time.time;
         }
 
-        gameObject.transform.Translate(speed * Vector3.forward * Time.deltaTime);
         gameObject.transform.Rotate(rotation * Time.deltaTime);
     }
 
@@ -87,11 +86,11 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Move(int distance)
     {
-        speed = _moveSpeed;
+        gameObject.GetComponent<Rigidbody>().velocity = transform.forward * _moveSpeed;
 
         yield return new WaitForSeconds(distance/_moveSpeed);
 
-        speed = 0;
+        gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         executing = false;
     }
 
