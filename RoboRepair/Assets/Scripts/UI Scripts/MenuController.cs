@@ -41,7 +41,13 @@ public class MenuController : MonoBehaviour
         for (int i = 0; i < LevelController.singleton.numSlots; i++)
         {
             GameObject slot = Instantiate(slotPrefab, instructionContent);
-            slot
+            slotList.Add(slot.GetComponent<SlotController>());
+        }
+        slots = slotList.ToArray();
+
+        foreach (Block block in LevelController.singleton.inventory)
+        {
+            GameObject codeBlock = Instantiate(blockPrefab, inventoryContent);
         }
     }
 
