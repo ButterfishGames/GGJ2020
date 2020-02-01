@@ -8,10 +8,16 @@ using TMPro;
 public class BlockController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public static GameObject blockBeingDragged;
+    public bool broken;
     public Block block;
 
     public void OnBeginDrag (PointerEventData eventData)
     {
+        if (broken)
+        {
+            return;
+        }
+
         blockBeingDragged = gameObject;
         transform.SetParent(MenuController.singleton.codingPanel);
         GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -19,16 +25,30 @@ public class BlockController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnDrag (PointerEventData eventData)
     {
+        if (broken)
+        {
+            return;
+        }
+
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag (PointerEventData eventData)
     {
+        if (broken)
+        {
+            return;
+        }
+
         blockBeingDragged = null;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
         if (transform.parent == MenuController.singleton.codingPanel)
         {
             transform.SetParent(MenuController.singleton.inventoryContent);
+            if (GetComponent<Button>() != null)
+            {
+                Destroy(GetComponent<Button>());
+            }
         }
     }
 

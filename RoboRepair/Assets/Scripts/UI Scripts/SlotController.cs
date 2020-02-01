@@ -20,7 +20,7 @@ public class SlotController : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (!block)
+        if (block == null && BlockController.blockBeingDragged != null)
         {
             BlockController dragBlockController = BlockController.blockBeingDragged.GetComponent<BlockController>();
             BlockController.blockBeingDragged.transform.SetParent(transform);

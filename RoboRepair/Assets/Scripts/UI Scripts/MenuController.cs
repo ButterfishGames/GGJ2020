@@ -45,11 +45,29 @@ public class MenuController : MonoBehaviour
         }
         slots = slotList.ToArray();
 
+        for(int i = 0; i < LevelController.singleton.brokenBlocks.Length; i++)
+        {
+            SlotController slot = slots[LevelController.singleton.brokenBlocks[i].slot];
+            if (slot.block == null)
+            {
+                GameObject codeBlock = Instantiate(blockPrefab, slot.transform);
+                BlockController blockController = codeBlock.GetComponent<BlockController>();
+                blockController.block = LevelController.singleton.brokenBlocks[i].block;
+                blockController.broken = true;
+                blockController.InitUI();
+            }
+            else
+            {
+                Debug.Log("ERROR: Repeated slot for broken blocks");
+            }
+        }
+
         foreach (Block block in LevelController.singleton.inventory)
         {
             GameObject codeBlock = Instantiate(blockPrefab, inventoryContent);
-            codeBlock.GetComponent<BlockController>().block = block;
-            codeBlock.GetComponent<BlockController>().InitUI();
+            BlockController blockController = codeBlock.GetComponent<BlockController>();
+            blockController.block = block;
+            blockController.InitUI();
         }
     }
 

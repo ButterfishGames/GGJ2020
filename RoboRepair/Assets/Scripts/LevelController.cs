@@ -9,6 +9,8 @@ public class LevelController : MonoBehaviour
 
     public Block[] inventory;
 
+    public BrokenBlock[] brokenBlocks;
+
     public int numSlots;
 
     // Start is called before the first frame update
@@ -25,4 +27,11 @@ public class LevelController : MonoBehaviour
 
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
     }
+}
+
+[System.Serializable]
+public struct BrokenBlock
+{
+    public Block block;
+    public int slot;
 }
