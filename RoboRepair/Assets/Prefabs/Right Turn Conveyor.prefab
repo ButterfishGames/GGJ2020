@@ -136,6 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f888f8d18163a4bb73a432d9f6b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conveyerType: 2
+  conveyorType: 2
   moveSpeed: 2.5
   turnSpeed: 180
