@@ -7,6 +7,7 @@ TagManager:
   - Waypoint
   - Bullet
   - Repair
+  - Conveyer
   layers:
   - Default
   - TransparentFX
