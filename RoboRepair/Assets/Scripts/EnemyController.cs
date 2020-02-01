@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    public BoxCollider visionCollider;
     RaycastHit hit;
     int currentWP = 0;
     bool attackingPlayer = false;
@@ -50,7 +49,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        bool coneIntersected = Physics.BoxCast(visionCollider.bounds.center, visionCollider.bounds.size / 2, visionCollider.gameObject.transform.forward, out hit, visionCollider.gameObject.transform.rotation, 1);
+        bool coneIntersected = Physics.SphereCast(transform.position, 1, gameObject.transform.forward, out hit, 7);
 
         if(coneIntersected)
         {

@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     //Just for tweaking and iterating, should not be modifiable by player
     int _moveSpeed = 5;
-    int _turnSpeed = 45;
+    int _turnSpeed = 90;
 
     void Start()
     {
