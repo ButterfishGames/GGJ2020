@@ -21,8 +21,6 @@ public class ConveyorController : MonoBehaviour
 
     private Transform targetTransform;
 
-    private bool vAdded = false;
-
     private void Update()
     {
         if (conveyorType != ConveyorType.straight && targetTransform != null)
@@ -41,7 +39,7 @@ public class ConveyorController : MonoBehaviour
             int mod = conveyorType == ConveyorType.rightTurn ? 1 : -1;
             StartCoroutine(Turn(90 * mod));
         }
-        
+
         rb.velocity = (rb.velocity + transform.forward * 0.001f).normalized * (transform.forward * moveSpeed).magnitude;
     }
 
@@ -61,7 +59,18 @@ public class ConveyorController : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Rigidbody rb = other.GetComponent<Rigidbody>();
-        rb.velocity = Vector3.zero;
+        Vector3 vAdjust = transform.forward;
+        vAdjust.x = Mathf.RoundToInt(vAdjust.x) == 0 ? 1 : 0;
+        vAdjust.y = Mathf.RoundToInt(vAdjust.y) == 0 ? 1 : 0;
+        vAdjust.z = Mathf.RoundToInt(vAdjust.z) == 0 ? 1 : 0;
+
+        Debug.Log(transform.forward);
+        Debug.Log(vAdjust);
+
+        rb.velocity = new Vector3(
+            rb.velocity.x * vAdjust.x,
+            rb.velocity.y * vAdjust.y,
+            rb.velocity.z * vAdjust.z);
     }
 
     IEnumerator Turn(int amount)
