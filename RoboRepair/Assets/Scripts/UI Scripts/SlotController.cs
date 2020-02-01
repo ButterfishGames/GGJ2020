@@ -20,22 +20,42 @@ public class SlotController : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (block == null && BlockController.blockBeingDragged != null)
+        if (BlockController.blockBeingDragged == null)
         {
-            BlockController dragBlockController = BlockController.blockBeingDragged.GetComponent<BlockController>();
-            BlockController.blockBeingDragged.transform.SetParent(transform);
-            BlockController.blockBeingDragged.transform.localScale = Vector3.one;
-            if (BlockController.blockBeingDragged.GetComponent<Button>() == null)
-            {
-                Button remove = BlockController.blockBeingDragged.AddComponent<Button>();
-                remove.onClick.AddListener(() => dragBlockController.RemoveBlock());
-            }
-
-            if (dragBlockController.currSprite % 2 == 0)
-            {
-                dragBlockController.currSprite++;
-            }
-            BlockController.blockBeingDragged.GetComponent<Image>().sprite = dragBlockController.sprites[dragBlockController.currSprite];
+            return;
         }
+
+        BlockController dragBlockController = BlockController.blockBeingDragged.GetComponent<BlockController>();
+
+        if (block != null)
+        {
+            GameObject exBlock = block;
+            exBlock.transform.SetParent(dragBlockController.previousParent);
+            exBlock.transform.localScale = Vector3.one;
+
+            if (exBlock.transform.parent == MenuController.singleton.inventoryContent)
+            {
+                Destroy(exBlock.GetComponent<Button>());
+
+                BlockController blockController = exBlock.GetComponent<BlockController>();
+
+                blockController.currSprite--;
+                exBlock.GetComponent<Image>().sprite = blockController.sprites[blockController.currSprite];
+            }
+        }
+
+        BlockController.blockBeingDragged.transform.SetParent(transform);
+        BlockController.blockBeingDragged.transform.localScale = Vector3.one;
+        if (BlockController.blockBeingDragged.GetComponent<Button>() == null)
+        {
+            Button remove = BlockController.blockBeingDragged.AddComponent<Button>();
+            remove.onClick.AddListener(() => dragBlockController.RemoveBlock());
+        }
+
+        if (dragBlockController.currSprite % 2 == 0)
+        {
+            dragBlockController.currSprite++;
+        }
+        BlockController.blockBeingDragged.GetComponent<Image>().sprite = dragBlockController.sprites[dragBlockController.currSprite];
     }
 }

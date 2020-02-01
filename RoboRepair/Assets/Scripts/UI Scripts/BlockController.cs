@@ -18,12 +18,16 @@ public class BlockController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public RuntimeAnimatorController brokenController;
 
+    public Transform previousParent;
+
     public void OnBeginDrag (PointerEventData eventData)
     {
         if (broken)
         {
             return;
         }
+
+        previousParent = transform.parent;
 
         blockBeingDragged = gameObject;
         transform.SetParent(MenuController.singleton.codingPanel);
