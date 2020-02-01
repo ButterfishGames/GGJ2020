@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     int[] commandActions;
     int[] commandValues;
 
-    bool executing = false;
+    public bool executing = false;
 
     int speed = 0;
     Vector3 rotation = Vector3.zero;

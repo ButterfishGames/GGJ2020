@@ -40,6 +40,11 @@ public class EnemyController : MonoBehaviour
             }
         }
 
+        
+    }
+
+    public void BeginPathing()
+    {
         agent.destination = Waypoints[0].position;
     }
 
