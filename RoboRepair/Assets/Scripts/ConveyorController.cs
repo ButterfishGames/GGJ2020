@@ -64,9 +64,6 @@ public class ConveyorController : MonoBehaviour
         vAdjust.y = Mathf.RoundToInt(vAdjust.y) == 0 ? 1 : 0;
         vAdjust.z = Mathf.RoundToInt(vAdjust.z) == 0 ? 1 : 0;
 
-        Debug.Log(transform.forward);
-        Debug.Log(vAdjust);
-
         rb.velocity = new Vector3(
             rb.velocity.x * vAdjust.x,
             rb.velocity.y * vAdjust.y,

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2050929142663618654}
   - component: {fileID: 2992754259649036871}
   - component: {fileID: 4348879545797997026}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 6953743234494777995}
   - component: {fileID: 6953743234494777993}
   - component: {fileID: 6953743234494777992}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Implosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4857,7 +4857,7 @@ GameObject:
   - component: {fileID: 6953743234525223288}
   - component: {fileID: 6953743234525223294}
   - component: {fileID: 6953743234525223289}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Small Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9668,7 +9668,7 @@ GameObject:
   - component: {fileID: 6953743234669830696}
   - component: {fileID: 6953743234669830702}
   - component: {fileID: 6953743234669830697}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14479,7 +14479,7 @@ GameObject:
   - component: {fileID: 6953743235044181665}
   - component: {fileID: 6953743235044181671}
   - component: {fileID: 6953743235044181670}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19268,7 +19268,7 @@ GameObject:
   - component: {fileID: 6953743236081936435}
   - component: {fileID: 6953743236081936433}
   - component: {fileID: 6953743236081936432}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Blast
   m_TagString: Untagged
   m_Icon: {fileID: 0}

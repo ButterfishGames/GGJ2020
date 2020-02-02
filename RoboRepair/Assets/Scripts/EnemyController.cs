@@ -65,7 +65,7 @@ public class EnemyController : MonoBehaviour
             {
                 agent.ResetPath();
 
-                if (!attackingPlayer)
+                if (!attackingPlayer && rb.isKinematic)
                 {
                     attackingPlayer = true;
 
@@ -104,20 +104,21 @@ public class EnemyController : MonoBehaviour
 
         }
 
-        Debug.Log(currentWP);
-
-        if (Vector3.Distance(transform.position, Waypoints[currentWP].position) < 1f)
+        if (Waypoints.ToArray().Length > 0 && Waypoints[currentWP] != null)
         {
-            if (currentWP == (Waypoints.Count - 1))
+            if (Vector3.Distance(transform.position, Waypoints[currentWP].position) < 1f)
             {
-                currentWP = 0;
-            }
-            else
-            {
-                currentWP += 1;
-            }
+                if (currentWP == (Waypoints.Count - 1))
+                {
+                    currentWP = 0;
+                }
+                else
+                {
+                    currentWP += 1;
+                }
 
-            StartCoroutine(NewDestination());
+                StartCoroutine(NewDestination());
+            }
         }
     }
 

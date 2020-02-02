@@ -1102,7 +1102,7 @@ MonoBehaviour:
     val: 12
   - blockType: 1
     val: 90
-  - blockType: 0
+  - blockType: 1
     val: -90
   brokenBlocks: []
   numSlots: 3
@@ -4754,6 +4754,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1820006188, guid: 4615d4f8af7282c4db08071c756d0f1c, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6501339041120877121, guid: 4615d4f8af7282c4db08071c756d0f1c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4813,6 +4817,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501339041120877125, guid: 4615d4f8af7282c4db08071c756d0f1c,
+        type: 3}
+      propertyPath: enemies.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501339041120877125, guid: 4615d4f8af7282c4db08071c756d0f1c,
+        type: 3}
+      propertyPath: workers.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6501339041120877125, guid: 4615d4f8af7282c4db08071c756d0f1c,
         type: 3}
