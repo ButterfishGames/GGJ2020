@@ -116,4 +116,15 @@ public class MenuController : MonoBehaviour
 
         ToggleMenu();
     }
+
+    public void Clear()
+    {
+        foreach (SlotController slot in slots)
+        {
+            if (slot.block != null)
+            {
+                slot.block.GetComponent<BlockController>().RemoveBlock();
+            }
+        }
+    }
 }
