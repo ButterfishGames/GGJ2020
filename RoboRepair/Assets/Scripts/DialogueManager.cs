@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     private GameObject dialogueBox;
 
+    private GameObject wackE;
+
     /// <summary>
     /// Object reference to the text component which will contain dialogue
     /// </summary>
@@ -57,6 +59,10 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueBox = rect.gameObject;
             }
+            if (rect.name.Equals("WackE"))
+            {
+                wackE = rect.gameObject;
+            }
         }
 
         dialogueText = dialogueBox.GetComponentInChildren<TextMeshProUGUI>(true);
@@ -91,6 +97,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueBox.SetActive(true);
+        wackE.SetActive(true);
 
         displaying = true;
         DisplayNextLine();
@@ -116,6 +123,7 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         dialogueBox.SetActive(false);
+        wackE.SetActive(false);
         displaying = false;
     }
 
