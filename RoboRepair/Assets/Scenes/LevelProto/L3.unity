@@ -120,14 +120,14 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: aa6706053e1fefd4aa37084c70f9df0d, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 6f1c6ae03044a62468fd482f109a9846, type: 2}
 --- !u!43 &23531636
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh116492
+  m_Name: pb_Mesh73276
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -645,8 +645,8 @@ GameObject:
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &248557293
 MeshCollider:
@@ -954,8 +954,8 @@ GameObject:
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &312047989
 MeshCollider:
@@ -1418,8 +1418,8 @@ GameObject:
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &375427502
 MeshCollider:
@@ -1716,7 +1716,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh116536
+  m_Name: pb_Mesh73326
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1728,7 +1728,7 @@ Mesh:
     vertexCount: 24
     localAABB:
       m_Center: {x: -18.5, y: 0.5, z: 14.5}
-      m_Extent: {x: 11.5, y: 0.5, z: 13.5}
+      m_Extent: {x: 11.5, y: 0.5, z: 14.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1807,7 +1807,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 1152
-    _typelessdata: 0000f0c1000000000000e04100000000000000000000803f000080bf0000000000000000000080bf0000f041000000000000e0c0000000000000e04100000000000000000000803f000080bf0000000000000000000080bf0000e040000000000000f0c10000803f0000e04100000000000000000000803f000080bf0000000000000000000080bf0000f0410000803f0000e0c00000803f0000e04100000000000000000000803f000080bf0000000000000000000080bf0000e0400000803f0000e0c0000000000000e0410000803f000000000000000000000000000000000000803f000080bf0000e041000000000000e0c0000000000000803f0000803f000000000000000000000000000000000000803f000080bf0000803f000000000000e0c00000803f0000e0410000803f000000000000000000000000000000000000803f000080bf0000e0410000803f0000e0c00000803f0000803f0000803f000000000000000000000000000000000000803f000080bf0000803f0000803f0000e0c0000000000000803f0000000000000000000080bf0000803f0000000000000000000080bf0000e0c0000000000000f0c1000000000000803f0000000000000000000080bf0000803f0000000000000000000080bf0000f0c1000000000000e0c00000803f0000803f0000000000000000000080bf0000803f0000000000000000000080bf0000e0c00000803f0000f0c10000803f0000803f0000000000000000000080bf0000803f0000000000000000000080bf0000f0c10000803f0000f0c1000000000000803f000080bf00000000000000000000000000000000000080bf000080bf000080bf000000000000f0c1000000000000e041000080bf00000000000000000000000000000000000080bf000080bf0000e0c1000000000000f0c10000803f0000803f000080bf00000000000000000000000000000000000080bf000080bf000080bf0000803f0000f0c10000803f0000e041000080bf00000000000000000000000000000000000080bf000080bf0000e0c10000803f0000f0c10000803f0000e041000000000000803f000000000000803f0000000000000000000080bf0000f0c10000e0410000e0c00000803f0000e041000000000000803f000000000000803f0000000000000000000080bf0000e0c00000e0410000f0c10000803f0000803f000000000000803f000000000000803f0000000000000000000080bf0000f0c10000803f0000e0c00000803f0000803f000000000000803f000000000000803f0000000000000000000080bf0000e0c00000803f0000f0c1000000000000803f00000000000080bf00000000000080bf0000000000000000000080bf0000f0410000803f0000e0c0000000000000803f00000000000080bf00000000000080bf0000000000000000000080bf0000e0400000803f0000f0c1000000000000e04100000000000080bf00000000000080bf0000000000000000000080bf0000f0410000e0410000e0c0000000000000e04100000000000080bf00000000000080bf0000000000000000000080bf0000e0400000e041
+    _typelessdata: 0000f0c1000000000000e84100000000000000000000803f000080bf0000000000000000000080bf0000f041000000000000e0c0000000000000e84100000000000000000000803f000080bf0000000000000000000080bf0000e040000000000000f0c10000803f0000e84100000000000000000000803f000080bf0000000000000000000080bf0000f0410000803f0000e0c00000803f0000e84100000000000000000000803f000080bf0000000000000000000080bf0000e0400000803f0000e0c0000000000000e8410000803f000000000000000000000000000000000000803f000080bf0000e841000000000000e0c000000000000000000000803f000000000000000000000000000000000000803f000080bf00000000000000000000e0c00000803f0000e8410000803f000000000000000000000000000000000000803f000080bf0000e8410000803f0000e0c00000803f000000000000803f000000000000000000000000000000000000803f000080bf000000000000803f0000e0c000000000000000000000000000000000000080bf0000803f0000000000000000000080bf0000e0c0000000000000f0c100000000000000000000000000000000000080bf0000803f0000000000000000000080bf0000f0c1000000000000e0c00000803f000000000000000000000000000080bf0000803f0000000000000000000080bf0000e0c00000803f0000f0c10000803f000000000000000000000000000080bf0000803f0000000000000000000080bf0000f0c10000803f0000f0c10000000000000000000080bf00000000000000000000000000000000000080bf000080bf00000000000000000000f0c1000000000000e841000080bf00000000000000000000000000000000000080bf000080bf0000e8c1000000000000f0c10000803f00000000000080bf00000000000000000000000000000000000080bf000080bf000000000000803f0000f0c10000803f0000e841000080bf00000000000000000000000000000000000080bf000080bf0000e8c10000803f0000f0c10000803f0000e841000000000000803f000000000000803f0000000000000000000080bf0000f0c10000e8410000e0c00000803f0000e841000000000000803f000000000000803f0000000000000000000080bf0000e0c00000e8410000f0c10000803f00000000000000000000803f000000000000803f0000000000000000000080bf0000f0c1000000000000e0c00000803f00000000000000000000803f000000000000803f0000000000000000000080bf0000e0c0000000000000f0c1000000000000000000000000000080bf00000000000080bf0000000000000000000080bf0000f041000000000000e0c0000000000000000000000000000080bf00000000000080bf0000000000000000000080bf0000e040000000000000f0c1000000000000e84100000000000080bf00000000000080bf0000000000000000000080bf0000f0410000e8410000e0c0000000000000e84100000000000080bf00000000000080bf0000000000000000000080bf0000e0400000e841
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1862,7 +1862,7 @@ Mesh:
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: -18.5, y: 0.5, z: 14.5}
-    m_Extent: {x: 11.5, y: 0.5, z: 13.5}
+    m_Extent: {x: 11.5, y: 0.5, z: 14.5}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
@@ -1988,7 +1988,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh116524
+  m_Name: pb_Mesh73314
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2538,8 +2538,8 @@ GameObject:
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &611544538
 MeshCollider:
@@ -2916,8 +2916,8 @@ GameObject:
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &669289496
 MeshCollider:
@@ -3296,7 +3296,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh116554
+  m_Name: pb_Mesh73360
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3630,8 +3630,8 @@ GameObject:
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &823424576
 MeshCollider:
@@ -4083,55 +4083,55 @@ MonoBehaviour:
   - m_Vertices: 0b0000000e00000012000000
   m_SharedTextures: []
   m_Positions:
-  - {x: -30, y: 0, z: 28}
-  - {x: -7, y: 0, z: 28}
-  - {x: -30, y: 1, z: 28}
-  - {x: -7, y: 1, z: 28}
-  - {x: -7, y: 0, z: 28}
-  - {x: -7, y: 0, z: 1}
-  - {x: -7, y: 1, z: 28}
-  - {x: -7, y: 1, z: 1}
-  - {x: -7, y: 0, z: 1}
-  - {x: -30, y: 0, z: 1}
-  - {x: -7, y: 1, z: 1}
-  - {x: -30, y: 1, z: 1}
-  - {x: -30, y: 0, z: 1}
-  - {x: -30, y: 0, z: 28}
-  - {x: -30, y: 1, z: 1}
-  - {x: -30, y: 1, z: 28}
-  - {x: -30, y: 1, z: 28}
-  - {x: -7, y: 1, z: 28}
-  - {x: -30, y: 1, z: 1}
-  - {x: -7, y: 1, z: 1}
-  - {x: -30, y: 0, z: 1}
-  - {x: -7, y: 0, z: 1}
-  - {x: -30, y: 0, z: 28}
-  - {x: -7, y: 0, z: 28}
+  - {x: -30, y: 0, z: 29}
+  - {x: -7, y: 0, z: 29}
+  - {x: -30, y: 1, z: 29}
+  - {x: -7, y: 1, z: 29}
+  - {x: -7, y: 0, z: 29}
+  - {x: -7, y: 0, z: 0}
+  - {x: -7, y: 1, z: 29}
+  - {x: -7, y: 1, z: 0}
+  - {x: -7, y: 0, z: 0}
+  - {x: -30, y: 0, z: 0}
+  - {x: -7, y: 1, z: 0}
+  - {x: -30, y: 1, z: 0}
+  - {x: -30, y: 0, z: 0}
+  - {x: -30, y: 0, z: 29}
+  - {x: -30, y: 1, z: 0}
+  - {x: -30, y: 1, z: 29}
+  - {x: -30, y: 1, z: 29}
+  - {x: -7, y: 1, z: 29}
+  - {x: -30, y: 1, z: 0}
+  - {x: -7, y: 1, z: 0}
+  - {x: -30, y: 0, z: 0}
+  - {x: -7, y: 0, z: 0}
+  - {x: -30, y: 0, z: 29}
+  - {x: -7, y: 0, z: 29}
   m_Textures0:
   - {x: 30, y: 0}
   - {x: 7, y: 0}
   - {x: 30, y: 1}
   - {x: 7, y: 1}
-  - {x: 28, y: 0}
-  - {x: 1, y: 0}
-  - {x: 28, y: 1}
-  - {x: 1, y: 1}
+  - {x: 29, y: 0}
+  - {x: 0, y: 0}
+  - {x: 29, y: 1}
+  - {x: 0, y: 1}
   - {x: -7, y: 0}
   - {x: -30, y: 0}
   - {x: -7, y: 1}
   - {x: -30, y: 1}
-  - {x: -1, y: 0}
-  - {x: -28, y: 0}
-  - {x: -1, y: 1}
-  - {x: -28, y: 1}
-  - {x: -30, y: 28}
-  - {x: -7, y: 28}
-  - {x: -30, y: 1}
-  - {x: -7, y: 1}
-  - {x: 30, y: 1}
-  - {x: 7, y: 1}
-  - {x: 30, y: 28}
-  - {x: 7, y: 28}
+  - {x: 0, y: 0}
+  - {x: -29, y: 0}
+  - {x: 0, y: 1}
+  - {x: -29, y: 1}
+  - {x: -30, y: 29}
+  - {x: -7, y: 29}
+  - {x: -30, y: 0}
+  - {x: -7, y: 0}
+  - {x: 30, y: 0}
+  - {x: 7, y: 0}
+  - {x: 30, y: 29}
+  - {x: 7, y: 29}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -4168,9 +4168,17 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 00000000
+  m_SelectedEdges:
+  - a: 0
+    b: 1
+  - a: 2
+    b: 0
+  - a: 1
+    b: 3
+  - a: 3
+    b: 2
+  m_SelectedVertices: 00000000010000000200000003000000
 --- !u!23 &974367913
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4375,7 +4383,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh116444
+  m_Name: pb_Mesh73220
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4538,7 +4546,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh116462
+  m_Name: pb_Mesh73244
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4839,7 +4847,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh116572
+  m_Name: pb_Mesh73396
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5173,8 +5181,8 @@ GameObject:
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &1282609816
 MeshCollider:
@@ -5678,7 +5686,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh116432
+  m_Name: pb_Mesh73208
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6280,7 +6288,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh116504
+  m_Name: pb_Mesh73290
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6592,8 +6600,8 @@ GameObject:
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &2131164891
 MeshCollider:
