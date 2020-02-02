@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletSpawn;
     public GameObject[] enemies;
     public GameObject[] workers;
+    public GameObject explosion;
 
     [SerializeField]
     double timePassed;
@@ -78,6 +79,8 @@ public class PlayerController : MonoBehaviour
             executing = true;
 
             yield return new WaitUntil(() => executing == false);
+
+            gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
 
         yield return new WaitForSeconds(3);
@@ -111,7 +114,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator Move(int distance)
+    IEnumerator Move(float distance)
     {
         gameObject.GetComponent<Rigidbody>().velocity = transform.forward * _moveSpeed;
 
@@ -121,7 +124,7 @@ public class PlayerController : MonoBehaviour
         executing = false;
     }
 
-    IEnumerator Turn(int amount)
+    IEnumerator Turn(float amount)
     {
         rotation = new Vector3(0, _turnSpeed * (amount/Mathf.Abs(amount)), 0);
 
@@ -158,5 +161,27 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         executing = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            GameObject boom = Instantiate(explosion, transform.position + Vector3.up * 2, Quaternion.identity);
+            boom.transform.SetParent(gameObject.transform);
+            Vector3 direction = (collision.transform.position - transform.position);
+            StartCoroutine(DestroySelf(boom));
+            Destroy(collision.gameObject, .1f);
+        }
+    }
+
+    IEnumerator DestroySelf(GameObject g)
+    {
+        yield return new WaitForSeconds(2);
+        g.transform.SetParent(null);
+        foreach (MeshRenderer m in gameObject.GetComponentsInChildren<MeshRenderer>())
+        {
+            m.enabled = false;
+        }
     }
 }

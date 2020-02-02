@@ -18,11 +18,13 @@ public class EnemyController : MonoBehaviour
     public GameObject bullet;
     public GameObject bulletSpawn;
 
-    public ParticleSystem explosion;
+    public GameObject explosion;
 
     List<Transform> Waypoints;
 
     NavMeshAgent agent;
+
+    Rigidbody rb;
 
     void Start()
     {
@@ -43,6 +45,8 @@ public class EnemyController : MonoBehaviour
             }
         }
 
+        rb = GetComponent<Rigidbody>();
+        rb.isKinematic = true;
         
     }
 
@@ -100,12 +104,10 @@ public class EnemyController : MonoBehaviour
 
         }
 
+        Debug.Log(currentWP);
 
-        if (Vector3.Distance(transform.position, Waypoints[currentWP].position) < .1f)
+        if (Vector3.Distance(transform.position, Waypoints[currentWP].position) < 1f)
         {
-            transform.position = Waypoints[currentWP].position;
-            
-
             if (currentWP == (Waypoints.Count - 1))
             {
                 currentWP = 0;
@@ -130,9 +132,21 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Bullet"))
         {
-            ParticleSystem boom = Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
+            GameObject boom = Instantiate(explosion, transform.position+Vector3.up*2, Quaternion.identity);
+            boom.transform.SetParent(gameObject.transform);
+            agent.ResetPath();
+            rb.isKinematic = false;
+            Vector3 direction = (collision.transform.position - transform.position);
+            rb.AddForceAtPosition(direction.normalized * 200, transform.position - Vector3.down*2 - Vector3.back * 2);
+            StartCoroutine(DestroySelf(boom));
+            Destroy(collision.gameObject, .1f);
         }
+    }
+
+    IEnumerator DestroySelf(GameObject g)
+    {
+        yield return new WaitForSeconds(2);
+        g.transform.SetParent(null);
+        Destroy(gameObject);
     }
 }

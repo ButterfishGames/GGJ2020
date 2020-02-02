@@ -6,6 +6,6 @@ public class ParticleDeleter : MonoBehaviour
 {
     void Start()
     {
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 6);
     }
 }
