@@ -38,6 +38,8 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     private bool primed;
 
+    private bool disabled;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -70,6 +72,7 @@ public class DialogueManager : MonoBehaviour
         lines = new Queue<string>();
         displaying = false;
         primed = false;
+        disabled = false;
     }
 
     // LateUpdate is called once per frame after all Update methods have executed
@@ -85,11 +88,21 @@ public class DialogueManager : MonoBehaviour
             DisplayNextLine();
             primed = false;
         }
+
+        if (!disabled && MenuController.singleton != null)
+        {
+            MenuController.singleton.toggleButton.interactable = false;
+            disabled = true;
+        }
     }
 
     public void StartDialogue(string[] lns)
     {
-        MenuController.singleton.toggleButton.interactable = false;
+        if (MenuController.singleton != null)
+        {
+            MenuController.singleton.toggleButton.interactable = false;
+            disabled = true;
+        }
         lines.Clear();
 
         foreach(string line in lns)

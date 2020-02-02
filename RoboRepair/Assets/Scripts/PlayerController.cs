@@ -84,8 +84,8 @@ public class PlayerController : MonoBehaviour
             gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
 
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        yield return new WaitForSeconds(2);
+        LevelLoader.singleton.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void CheckNumber(int action, int value)

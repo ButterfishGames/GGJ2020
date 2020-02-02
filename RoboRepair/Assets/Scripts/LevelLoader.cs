@@ -42,7 +42,6 @@ public class LevelLoader : MonoBehaviour
     {
         StartCoroutine(LevelFade(false));
         yield return new WaitForSeconds(fadeTime);
-        Destroy(FindObjectOfType<MenuController>().gameObject);
         SceneManager.LoadScene(buildIndex);
         StartCoroutine(LevelFade(true));
     }

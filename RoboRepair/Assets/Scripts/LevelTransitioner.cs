@@ -10,6 +10,16 @@ public class LevelTransitioner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (MenuController.singleton != null)
+            {
+                Destroy(MenuController.singleton.gameObject);
+            }
+
+            if (WackEController.singleton != null)
+            {
+                Destroy(WackEController.singleton.gameObject);
+            }
+
             LevelLoader.singleton.LoadScene(nextLevelIndex);
         }
     }
