@@ -55,6 +55,7 @@ public class SlotController : MonoBehaviour, IDropHandler
         {
             Button remove = BlockController.blockBeingDragged.AddComponent<Button>();
             remove.onClick.AddListener(() => dragBlockController.RemoveBlock());
+            remove.transition = Selectable.Transition.None;
         }
 
         if (dragBlockController.currSprite % 2 == 0)
