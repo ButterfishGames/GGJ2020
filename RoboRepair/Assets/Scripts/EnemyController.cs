@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+    public Material angry;
+    public GameObject light;
     RaycastHit hit;
     int currentWP = 0;
     bool attackingPlayer = false;
@@ -62,6 +64,8 @@ public class EnemyController : MonoBehaviour
                 if (!attackingPlayer)
                 {
                     attackingPlayer = true;
+
+                    light.GetComponent<Renderer>().material = angry;
                     shootTimer = shootCooldown;
                 }
             }
