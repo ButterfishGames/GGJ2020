@@ -119,9 +119,12 @@ MonoBehaviour:
   - {fileID: 0}
   workers:
   - {fileID: 0}
-  explosion: {fileID: 0}
+  explosion: {fileID: 6953743235723105774, guid: 11189d4070a08aa4c93dd1d34c9006d1,
+    type: 3}
   timePassed: 0
   executing: 0
+  moving: 0
+  _moveSpeed: 5
 --- !u!54 &1820006188
 Rigidbody:
   m_ObjectHideFlags: 0
