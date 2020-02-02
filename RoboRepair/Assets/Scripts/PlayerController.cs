@@ -19,11 +19,12 @@ public class PlayerController : MonoBehaviour
     int[] commandValues;
 
     public bool executing = false;
+    public bool moving = false;
 
     Vector3 rotation = Vector3.zero;
 
     //Just for tweaking and iterating, should not be modifiable by player
-    int _moveSpeed = 5;
+    public int _moveSpeed = 5;
     int _turnSpeed = 90;
 
     void Start()
@@ -83,8 +84,8 @@ public class PlayerController : MonoBehaviour
             gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
 
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        yield return new WaitForSeconds(2);
+        LevelLoader.singleton.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void CheckNumber(int action, int value)
@@ -116,11 +117,13 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Move(float distance)
     {
+        moving = true;
         gameObject.GetComponent<Rigidbody>().velocity = transform.forward * _moveSpeed;
 
         yield return new WaitForSeconds(distance/_moveSpeed);
 
         gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        moving = false;
         executing = false;
     }
 

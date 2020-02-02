@@ -8,7 +8,11 @@ public class WorkerController : MonoBehaviour
     public Material repaired;
     double speed;
     double reverseTimer = -1;
-    //[Range(1, 3)]
+
+    [Range(1, 2)]
+    [Tooltip("1 = Walk forward, 2 = Walk in circles")]
+    public int behaviourMode;
+
     int behaviour = 0;
     public Transform ButtonObjective;
 
@@ -26,7 +30,7 @@ public class WorkerController : MonoBehaviour
     public void BeginBeingBroken()
     {
         speed = 2;
-        behaviour = 1;
+        behaviour = behaviourMode;
     }
 
     void Update()

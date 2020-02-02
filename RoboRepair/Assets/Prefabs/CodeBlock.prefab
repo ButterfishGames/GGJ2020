@@ -119,6 +119,7 @@ MonoBehaviour:
   - {fileID: -9039032713509276954, guid: 2622505af90980a449a9cd5dd100168a, type: 3}
   currSprite: 0
   brokenController: {fileID: 9100000, guid: b72336a7b1b2f974e8c88b373ce4d528, type: 2}
+  previousParent: {fileID: 0}
 --- !u!1 &5966045970605471611
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,8 +185,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[command] X'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d46cea61a4f91ee4092f90e63758ae5a, type: 2}
+  m_sharedMaterial: {fileID: -952863838655728106, guid: d46cea61a4f91ee4092f90e63758ae5a,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
