@@ -1529,7 +1529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOneBuildIndex: 2
-  creditsBuildIndex: 8
+  creditsBuildIndex: 9
   canvas: {fileID: 1318129457}
   inventoryContent: {fileID: 1146375334}
   slot: {fileID: 649928205}
