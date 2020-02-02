@@ -17,6 +17,8 @@ public class MenuController : MonoBehaviour
 
     public RectTransform instructionContent;
 
+    public Button toggleButton;
+
     public Image toggleImg;
 
     public Sprite openMenuSprite, closeMenuSprite;
@@ -115,6 +117,8 @@ public class MenuController : MonoBehaviour
         player.SetCommands(actions.ToArray(), values.ToArray());
 
         ToggleMenu();
+
+        toggleButton.interactable = false;
     }
 
     public void Clear()
@@ -123,7 +127,12 @@ public class MenuController : MonoBehaviour
         {
             if (slot.block != null)
             {
-                slot.block.GetComponent<BlockController>().RemoveBlock();
+                BlockController blockController = slot.block.GetComponent<BlockController>();
+
+                if (!blockController.broken)
+                {
+                    blockController.RemoveBlock();
+                }
             }
         }
     }

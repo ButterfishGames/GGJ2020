@@ -13,6 +13,14 @@ public class LevelController : MonoBehaviour
 
     public int numSlots;
 
+    private void Awake()
+    {
+        if (MenuController.singleton != null)
+        {
+            MenuController.singleton.toggleButton.interactable = true;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

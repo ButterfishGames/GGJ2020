@@ -47,7 +47,6 @@ public class EnemyController : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
-        
     }
 
     public void BeginPathing()
@@ -57,6 +56,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        
         bool coneIntersected = Physics.SphereCast(transform.position, 1, gameObject.transform.forward, out hit, 7);
 
         if(coneIntersected)
@@ -137,8 +137,20 @@ public class EnemyController : MonoBehaviour
             boom.transform.SetParent(gameObject.transform);
             agent.ResetPath();
             rb.isKinematic = false;
-            Vector3 direction = (collision.transform.position - transform.position);
-            rb.AddForceAtPosition(direction.normalized * 200, transform.position - Vector3.down*2 - Vector3.back * 2);
+
+            //Vector3 direction = (collision.transform.position - transform.position);
+            //rb.AddExplosionForce(650, (transform.position - Player.transform.position).normalized*.5f, 100, 75);
+            //rb.AddForceAtPosition(direction.normalized * 200, transform.position - Vector3.down*2 - Vector3.back * 2);
+
+            MeshCollider[] children = GetComponentsInChildren<MeshCollider>();
+            foreach (MeshCollider child in children)
+            {
+                    child.gameObject.GetComponent<MeshCollider>().enabled = false;
+            }
+
+            agent.enabled = false;
+            //gameObject.GetComponent<CapsuleCollider>().enabled = false;
+
             StartCoroutine(DestroySelf(boom));
             Destroy(collision.gameObject, .1f);
         }
@@ -148,6 +160,7 @@ public class EnemyController : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         g.transform.SetParent(null);
+        g.transform.rotation = Quaternion.identity;
         Destroy(gameObject);
     }
 }

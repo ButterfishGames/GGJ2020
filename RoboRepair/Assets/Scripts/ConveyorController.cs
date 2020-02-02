@@ -31,6 +31,11 @@ public class ConveyorController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player") && other.GetComponent<PlayerController>().moving && other.transform.forward != transform.forward)
+        {
+            return;
+        }
+
         Rigidbody rb = other.GetComponent<Rigidbody>();
 
         if (conveyorType != ConveyorType.straight)
@@ -45,6 +50,11 @@ public class ConveyorController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (other.CompareTag("Player") && other.GetComponent<PlayerController>().moving && other.transform.forward != transform.forward)
+        {
+            return;
+        }
+
         Rigidbody rb = other.GetComponent<Rigidbody>();
         if (rb.velocity == Vector3.zero)
         {
@@ -58,6 +68,11 @@ public class ConveyorController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (other.CompareTag("Player") && other.GetComponent<PlayerController>().moving && other.transform.forward != transform.forward)
+        {
+            return;
+        }
+
         Rigidbody rb = other.GetComponent<Rigidbody>();
         Vector3 vAdjust = transform.forward;
         vAdjust.x = Mathf.RoundToInt(vAdjust.x) == 0 ? 1 : 0;

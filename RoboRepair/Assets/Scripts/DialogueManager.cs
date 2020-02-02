@@ -39,7 +39,7 @@ public class DialogueManager : MonoBehaviour
     private bool primed;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (singleton == null)
         {
@@ -89,6 +89,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(string[] lns)
     {
+        MenuController.singleton.toggleButton.interactable = false;
         lines.Clear();
 
         foreach(string line in lns)
@@ -125,6 +126,7 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.SetActive(false);
         wackE.SetActive(false);
         displaying = false;
+        MenuController.singleton.toggleButton.interactable = true;
     }
 
     public bool GetDisplaying()
