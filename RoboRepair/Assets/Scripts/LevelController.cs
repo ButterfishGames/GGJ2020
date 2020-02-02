@@ -24,7 +24,7 @@ public class LevelController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
     }
 }
