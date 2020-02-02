@@ -123,7 +123,12 @@ public class MenuController : MonoBehaviour
         {
             if (slot.block != null)
             {
-                slot.block.GetComponent<BlockController>().RemoveBlock();
+                BlockController blockController = slot.block.GetComponent<BlockController>();
+
+                if (!blockController.broken)
+                {
+                    blockController.RemoveBlock();
+                }
             }
         }
     }

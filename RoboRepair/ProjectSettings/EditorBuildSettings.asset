@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Build Scenes/UIScene.unity
     guid: 3768eaeab0f914347bed3a1589d97cdf
+  - enabled: 1
+    path: Assets/Scenes/LevelProto/L1.unity
+    guid: a921f9f6b5cff85488afe2b66a654f10
+  - enabled: 1
+    path: Assets/Scenes/LevelProto/L2.unity
+    guid: 7179a0f8cd64cce4f83e2403dc9bf68f
+  - enabled: 1
+    path: Assets/Scenes/LevelProto/L3.unity
+    guid: 76514bef7ce03e24ab6216a582e9570b
+  - enabled: 1
+    path: Assets/Scenes/LevelProto/L4.unity
+    guid: 052de32acee1e704aba4e5cc962cb224
   m_configObjects: {}

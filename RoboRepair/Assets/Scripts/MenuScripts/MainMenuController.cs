@@ -17,6 +17,8 @@ public class MainMenuController : MonoBehaviour
 
     public MenuSlotController slot;
 
+    private bool run;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,8 @@ public class MainMenuController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        run = false;
     }
 
     public void RunScript()
@@ -37,30 +41,32 @@ public class MainMenuController : MonoBehaviour
             return;
         }
 
+        if (run)
+        {
+            return;
+        }
+
         switch (slot.block.GetComponent<MenuBlockController>().blockType)
         {
             case MenuBlockController.MenuBlockType.play:
-                Play();
+                LevelLoader.singleton.LoadScene(levelOneBuildIndex);
+                run = true;
                 break;
 
             case MenuBlockController.MenuBlockType.credits:
                 RollCredits();
+                run = true;
                 break;
 
             case MenuBlockController.MenuBlockType.quit:
                 Application.Quit();
+                run = true;
                 break;
 
             default:
                 Debug.Log("ERROR: Invalid MenuBlockType");
                 break;
         }
-    }
-
-    private void Play()
-    {
-        Debug.Log("This would play the game");
-        // SceneManager.LoadScene(levelOneBuildIndex);
     }
 
     private void RollCredits()
