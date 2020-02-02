@@ -32,6 +32,11 @@ public class MainMenuController : MonoBehaviour
 
     public void RunScript()
     {
+        if (slot.block == null)
+        {
+            return;
+        }
+
         switch (slot.block.GetComponent<MenuBlockController>().blockType)
         {
             case MenuBlockController.MenuBlockType.play:
@@ -54,11 +59,13 @@ public class MainMenuController : MonoBehaviour
 
     private void Play()
     {
-        SceneManager.LoadScene(levelOneBuildIndex);
+        Debug.Log("This would play the game");
+        // SceneManager.LoadScene(levelOneBuildIndex);
     }
 
     private void RollCredits()
     {
-        SceneManager.LoadScene(creditsBuildIndex);
+        Debug.Log("This would roll credits");
+        // SceneManager.LoadScene(creditsBuildIndex);
     }
 }
