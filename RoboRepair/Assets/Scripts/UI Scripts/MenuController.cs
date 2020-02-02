@@ -31,6 +31,7 @@ public class MenuController : MonoBehaviour
         if (singleton == null)
         {
             singleton = this;
+            DontDestroyOnLoad(gameObject);
         }
         else if (singleton != this)
         {
