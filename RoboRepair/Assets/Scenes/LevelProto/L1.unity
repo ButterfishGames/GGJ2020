@@ -598,7 +598,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-13414582
+  m_Name: pb_Mesh114034
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1435,7 +1435,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh87766
+  m_Name: pb_Mesh114066
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2429,7 +2429,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-13417920
+  m_Name: pb_Mesh114092
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3375,7 +3375,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh117264
+  m_Name: pb_Mesh114048
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3692,8 +3692,64 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
         type: 3}
+      propertyPath: lines.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
       propertyPath: speakOnStart
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[0]
+      value: "Hey there, I\u2019m WACK-E. Looks like you found your way into the mainframe
+        of our systems! Good thing I found you before another 4-MAN did."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[1]
+      value: Unlike the others, my programmer gave me functioning moral processes,
+        so I understand why you are here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[2]
+      value: Let me walk you through the process of fixing this mess of a factory.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[3]
+      value: "Currently, you\u2019re looking at the main view. You can see the starting
+        position your WR-KR robot, as well as the placement of any obstacles."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[4]
+      value: Take some time to familiarize yourself with the layout to plan ahead.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[5]
+      value: There is a green menu button at the bottom right of the screen. Click
+        this to open your code inventory.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[6]
+      value: 'Drag and drop the code blocks into the Instruction panel on the right
+        to write your robot''s code. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[7]
+      value: But plan carefully! There is a limit to how many you can use in a given
+        script.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[8]
+      value: Get to the yellow exit zone to proceed to the next area!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6becae56cf20d49b374aa5f325e2b7, type: 3}
@@ -3703,7 +3759,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh117196
+  m_Name: pb_Mesh113978
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4175,7 +4231,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh117214
+  m_Name: pb_Mesh113996
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4407,7 +4463,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-13415300
+  m_Name: pb_Mesh113964
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4570,7 +4626,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2803784
+  m_Name: pb_Mesh114120
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4733,7 +4789,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh117238
+  m_Name: pb_Mesh114022
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

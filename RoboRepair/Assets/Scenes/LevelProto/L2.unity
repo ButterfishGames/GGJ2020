@@ -5599,6 +5599,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1212345937}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1320734895
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5718665940383022677, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueManager (script)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718665940383022682, guid: 64cd1ee64fc956e4db8b7afebf09db14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 64cd1ee64fc956e4db8b7afebf09db14, type: 3}
 --- !u!43 &1443344576
 Mesh:
   m_ObjectHideFlags: 0
@@ -6179,6 +6248,181 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2038232159
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3843506126832021765, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_Name
+      value: WackEController
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021766, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: speakOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[0]
+      value: Oh! There's another WR-KR robot here!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[1]
+      value: Unfortunately, all the other WR-KRs here are defective.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[2]
+      value: If you use a Repair code block, you'll project a signal forward that'll
+        fix these defective robots.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[3]
+      value: Successfully repairing WR-KRs will allow them to open doors that would
+        otherwise impede your progress.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[4]
+      value: Maybe you should try repairing that one?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c6becae56cf20d49b374aa5f325e2b7, type: 3}
+--- !u!1001 &2038700154
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549764, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666535260519549766, guid: 993bfd9d9ff19cb408a18f17a16b50c2,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelLoader (script)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 993bfd9d9ff19cb408a18f17a16b50c2, type: 3}
 --- !u!1001 &2145320505
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -33,6 +33,14 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LevelFade(true));
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Quit"))
+        {
+            Application.Quit();
+        }
+    }
+
     public void LoadScene(int buildIndex)
     {
         StartCoroutine(FadeAndLoad(buildIndex));

@@ -9,7 +9,7 @@ public class CreditController : MonoBehaviour
     public float scrollSpeed;
     public float endY;
 
-    public Transform creditContent;
+    public RectTransform creditContent;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +20,13 @@ public class CreditController : MonoBehaviour
     private IEnumerator RollCredits()
     {
         yield return new WaitForSeconds(initWaitTime);
-        while (creditContent.position.y < endY)
+        while (creditContent.anchoredPosition.y < endY)
         {
-            Vector3 newPos = creditContent.position;
+            Vector3 newPos = creditContent.anchoredPosition;
             newPos += scrollSpeed * Vector3.up;
             newPos.y = Mathf.Clamp(newPos.y, -Mathf.Infinity, endY);
 
-            creditContent.position = newPos;
+            creditContent.anchoredPosition = newPos;
             yield return new WaitForEndOfFrame();
         }
 
