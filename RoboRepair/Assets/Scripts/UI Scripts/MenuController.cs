@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
@@ -17,7 +17,9 @@ public class MenuController : MonoBehaviour
 
     public RectTransform instructionContent;
 
-    public TextMeshProUGUI toggleText; // Delete when sprites for toggle are created
+    public Image toggleImg;
+
+    public Sprite openMenuSprite, closeMenuSprite;
 
     private bool showing;
 
@@ -29,6 +31,7 @@ public class MenuController : MonoBehaviour
         if (singleton == null)
         {
             singleton = this;
+            DontDestroyOnLoad(gameObject);
         }
         else if (singleton != this)
         {
@@ -76,19 +79,26 @@ public class MenuController : MonoBehaviour
         if (showing)
         {
             codingPanel.anchoredPosition = new Vector2(384, 0);
-            toggleText.text = "<"; // Delete when sprites for toggle are created
+            toggleImg.sprite = openMenuSprite;
             showing = false;
         }
         else
         {
             codingPanel.anchoredPosition = new Vector2(-384, 0);
-            toggleText.text = ">"; // Delete when sprites for toggle are created
+            toggleImg.sprite = closeMenuSprite;
             showing = true;
         }
     }
 
     public void RunScript()
     {
+        PlayerController player = FindObjectOfType<PlayerController>();
+
+        if (player.executing)
+        {
+            return;
+        }
+
         List<int> actions = new List<int>();
         List<int> values = new List<int>();
 
@@ -102,6 +112,8 @@ public class MenuController : MonoBehaviour
             }
         }
 
-        FindObjectOfType<PlayerController>().SetCommands(actions.ToArray(), values.ToArray());
+        player.SetCommands(actions.ToArray(), values.ToArray());
+
+        ToggleMenu();
     }
 }
