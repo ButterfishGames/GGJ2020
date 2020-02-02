@@ -494,19 +494,19 @@ MonoBehaviour:
   - blockType: 1
     val: 90
   - blockType: 0
-    val: 0
+    val: 5
   - blockType: 0
     val: 20
   - blockType: 4
     val: 3
   - blockType: 3
-    val: 0
+    val: 1
   - blockType: 1
     val: 180
   - blockType: 1
     val: -90
   - blockType: 3
-    val: 0
+    val: 1
   - blockType: 0
     val: 5
   - blockType: 1
