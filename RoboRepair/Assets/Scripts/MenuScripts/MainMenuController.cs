@@ -54,7 +54,7 @@ public class MainMenuController : MonoBehaviour
                 break;
 
             case MenuBlockController.MenuBlockType.credits:
-                RollCredits();
+                LevelLoader.singleton.LoadScene(creditsBuildIndex);
                 run = true;
                 break;
 
@@ -67,11 +67,5 @@ public class MainMenuController : MonoBehaviour
                 Debug.Log("ERROR: Invalid MenuBlockType");
                 break;
         }
-    }
-
-    private void RollCredits()
-    {
-        Debug.Log("This would roll credits");
-        // SceneManager.LoadScene(creditsBuildIndex);
     }
 }
