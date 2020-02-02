@@ -14,6 +14,7 @@ public class CreditController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(creditContent.position.y);
         StartCoroutine(RollCredits());
     }
 
