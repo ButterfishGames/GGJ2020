@@ -6153,6 +6153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
         type: 3}
+      propertyPath: lines.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
       propertyPath: lines.Array.data[0]
       value: This part of the factory contains conveyor belts!
       objectReference: {fileID: 0}
@@ -6172,6 +6177,27 @@ PrefabInstance:
         type: 3}
       propertyPath: speakOnStart
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[3]
+      value: Wait a minute, something doesn't seem right...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[4]
+      value: One of your code blocks is broken!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[5]
+      value: Broken code blocks can't be moved, removed or replaced, so you'll have
+        to work around it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843506126832021767, guid: 5c6becae56cf20d49b374aa5f325e2b7,
+        type: 3}
+      propertyPath: lines.Array.data[6]
+      value: Maybe you can find a way to work it into your script?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6becae56cf20d49b374aa5f325e2b7, type: 3}
