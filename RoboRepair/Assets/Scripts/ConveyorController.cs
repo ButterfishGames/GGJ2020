@@ -35,8 +35,12 @@ public class ConveyorController : MonoBehaviour
         {
             return;
         }
-
-        Rigidbody rb = other.GetComponent<Rigidbody>();
+        
+        Rigidbody rb;
+        if (!other.TryGetComponent(out rb))
+        {
+            return;
+        }
 
         if (conveyorType != ConveyorType.straight)
         {
@@ -55,7 +59,12 @@ public class ConveyorController : MonoBehaviour
             return;
         }
 
-        Rigidbody rb = other.GetComponent<Rigidbody>();
+        Rigidbody rb;
+        if (!other.TryGetComponent(out rb))
+        {
+            return;
+        }
+
         if (rb.velocity == Vector3.zero)
         {
             rb.velocity = transform.forward * moveSpeed;
@@ -73,7 +82,12 @@ public class ConveyorController : MonoBehaviour
             return;
         }
 
-        Rigidbody rb = other.GetComponent<Rigidbody>();
+        Rigidbody rb;
+        if (!other.TryGetComponent(out rb))
+        {
+            return;
+        }
+
         Vector3 vAdjust = transform.forward;
         vAdjust.x = Mathf.RoundToInt(vAdjust.x) == 0 ? 1 : 0;
         vAdjust.y = Mathf.RoundToInt(vAdjust.y) == 0 ? 1 : 0;
