@@ -26,8 +26,12 @@ public class EnemyController : MonoBehaviour
 
     Rigidbody rb;
 
+    bool exploding;
+
     void Start()
     {
+        exploding = false;
+
         WaypointsObject.transform.SetParent(null);
         Waypoints = new List<Transform>();
         agent = GetComponent<NavMeshAgent>();
@@ -56,7 +60,11 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        
+        if (exploding)
+        {
+            return;
+        }
+
         bool coneIntersected = Physics.SphereCast(transform.position, 1, gameObject.transform.forward, out hit, 7);
 
         if(coneIntersected)
@@ -133,6 +141,8 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Bullet"))
         {
+            exploding = true;
+            light.SetActive(false);
             GameObject boom = Instantiate(explosion, transform.position+Vector3.up*2, Quaternion.identity);
             boom.transform.SetParent(gameObject.transform);
             agent.ResetPath();

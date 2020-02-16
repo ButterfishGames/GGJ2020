@@ -72,7 +72,7 @@ public class WorkerController : MonoBehaviour
 
             agent.SetDestination(ButtonObjective.position);
 
-            if(Vector3.Distance(transform.position, ButtonObjective.position) < 1)
+            if(Vector3.Distance(transform.position, ButtonObjective.position) < 1.2f)
             {
                 ButtonObjective.gameObject.GetComponent<ButtonController>().Activate();
 
