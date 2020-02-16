@@ -51,12 +51,12 @@ public class SlotController : MonoBehaviour, IDropHandler
 
         BlockController.blockBeingDragged.transform.SetParent(transform);
         BlockController.blockBeingDragged.transform.localScale = Vector3.one;
-        if (BlockController.blockBeingDragged.GetComponent<Button>() == null)
+        /*if (BlockController.blockBeingDragged.GetComponent<Button>() == null)
         {
             Button remove = BlockController.blockBeingDragged.AddComponent<Button>();
             remove.onClick.AddListener(() => dragBlockController.RemoveBlock());
             remove.transition = Selectable.Transition.None;
-        }
+        }*/
 
         if (dragBlockController.currSprite % 2 == 0)
         {

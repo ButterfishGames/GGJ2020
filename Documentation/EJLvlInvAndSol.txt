@@ -1,0 +1,67 @@
+LEVEL 1
+
+1.  Move 5
+2.  Turn R 90
+3.  Wait 1s
+4.  Move 10
+5.  Repair
+6.  Turn R 90
+7.  Shoot
+8.  Turn 180
+9.  Repair
+10. Turn 180
+11. Move 5 [broken]
+12. Turn L 90
+13. Move 20
+
+Inventory: 20
+Move 5 x3
+Move 10 x1
+Move 20 x1
+Turn R 90 x2
+Turn L 90 x3
+Turn R 180 x2
+Turn L 180 x1
+Shoot x1
+Repair x2
+Wait 1s x1
+Wait 2s x2
+Wait 3s x1
+
+==========================
+
+LEVEL 2
+
+1.  Turn L 90
+2.  Wait 2s
+3.  Repair
+4.  Turn R 90
+5.  Move 10
+6.  Turn L 90
+7.  Move 20
+8.  Move 5
+9.  Turn 180
+10. Repair
+11. Wait 5s
+12. Shoot
+13. Repair
+14. Move 5
+15. Turn L 90
+16. Move 2 (broken)
+17. Wait 3s
+18. Move 20
+
+Inventory: 25
+Move 5 x3
+Move 10 x1
+Move 20 x2
+Turn R 90 x2
+Turn L 90 x3
+Turn R 180 x2
+Turn L 180 x1
+Shoot x3
+Repair x3
+Wait 2s x2
+Wait 3s x1
+Wait 5s x1
+Wait 10s x1

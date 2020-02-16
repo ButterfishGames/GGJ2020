@@ -30,9 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/EJ Level 2 draft.unity
     guid: b37d72ecccc28cd4da6556ffd83dbcc3
   - enabled: 1
-    path: Assets/Scenes/EJ level 3.unity
-    guid: 4193882419b399d4ca4ab68170b3be46
-  - enabled: 1
     path: Assets/Scenes/Final Build Scenes/Credits.unity
     guid: 353363d0caff12948995378ac4009d41
   m_configObjects: {}
